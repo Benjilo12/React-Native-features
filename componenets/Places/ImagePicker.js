@@ -8,7 +8,7 @@ import { useState } from "react";
 import { Colors } from "../../contstants/colors";
 import OutlinesButton from "../UI/OutlinesButton";
 
-export default function ImagePicker() {
+export default function ImagePicker({ onTakeImage }) {
   const [pickedImage, setPickedImage] = useState(); // stores selected image URI
 
   // get camera permission info + function to request permission
@@ -51,6 +51,7 @@ export default function ImagePicker() {
     if (!image.canceled) {
       setPickedImage(image.assets[0].uri); // save the image URI
     }
+    onTakeImage(image.assets[0].uri);
   }
 
   // default preview text
