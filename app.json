@@ -25,7 +25,6 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-
     "plugins": [
       [
         "expo-image-picker",
@@ -39,7 +38,8 @@
           "locationAlwaysAndWhenInUsePermission": "Allow nativefeatures to access your location.",
           "locationWhenInUsePermission": "Allow nativefeatures to access your location while the app is in use."
         }
-      ]
+      ],
+      "expo-sqlite"
     ]
   }
 }
